@@ -1,0 +1,109 @@
+{
+	"Console log": {
+		"prefix": "vcl",
+		"body": [
+			"Console.log(\"$1\",$2)"
+		],
+		"description": "Console log"
+	},
+	"Named function": {
+		"prefix": "vfn",
+		"body": [
+			"function ${1:functionName}($2){",
+			"$3",
+			"}"
+		],
+		"description": "Named function"
+	},
+	"React export default function": {
+		"prefix": "vrdf",
+		"body": [
+		  "import React,{} from 'react'",
+		  "",
+		  "export default function ${1:functionName}(props) {",
+		  "  return (",
+		  "    <div>",
+		  "      <h1>Hello world $2</h1>",
+		  "    </div>",
+		  "  )",
+		  "}",
+		  ""
+		],
+		"description": "React export default function"
+	  },
+	  "React export default class": {
+		"prefix": "vrdc",
+		"body": [
+		  "import React, { Component } from 'react'",
+		  "",
+		  "export default class ${1:className} extends Component {",
+		  "  constructor(props) {",
+		  "    super(props);",
+		  "    this.state = {",
+		  "      $2",
+		  "    }",
+		  "  }",
+		  "",
+		  "  render() {",
+		  "    return (",
+		  "      <div>",
+		  "        <h1>Hello world $3 </h1>",
+		  "      </div>",
+		  "    )",
+		  "  }",
+		  "}",
+		  ""
+		],
+		"description": "React export default class"
+	  },
+	  "Es const export function ": {
+		"prefix": "vece",
+		"body": [
+		  "const ${1:functionName} =($3)=>{",
+		  "  $4",
+		  "}",
+		  "",
+		  "export {${2:functionName}}"
+		],
+		"description": "Es const export function "
+	  },
+	  "Es const function ": {
+		"prefix": "vec",
+		"body": [
+		  "const ${1:functionName} =($2)=>{",
+		  "  $3",
+		  "}"
+		],
+		"description": "Es const function "
+	  },
+	  "Es export const function ": {
+		"prefix": "veec",
+		"body": [
+		  "export const ${1:functionName} =($2)=>{",
+		  "  $3",
+		  "}"
+		],
+		"description": "Es export const function "
+	  },
+	  "const variable": {
+		"prefix": "vcv",
+		"body": [
+		  "const ${1:constName} = $2 ;"
+		],
+		"description": "const variable"
+	  },
+	  "let variable": {
+		"prefix": "vlv",
+		"body": [
+		  "let ${1:letName} = $2 ;"
+		],
+		"description": "let variable"
+	  },
+	  "var variable": {
+		"prefix": "vvv",
+		"body": [
+		  "var ${1:varName} = $2 ;"
+		],
+		"description": "var variable"
+	  }
+}
